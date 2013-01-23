@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-
+  
   # ovverride #create to respond to AJAX with a partial
   def create
     build_resource
@@ -20,6 +20,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   protected
+  
 
   def after_inactive_sign_up_path_for(resource)
     '/thankyou.html'
