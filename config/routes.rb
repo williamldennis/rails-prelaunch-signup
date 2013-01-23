@@ -11,4 +11,5 @@ RailsPrelaunchSignup::Application.routes.draw do
   resources :users, :only => [:show, :index] do
     get 'invite', :on => :member
   end
+
 end

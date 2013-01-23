@@ -2,7 +2,7 @@
   <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-horizontal' } do |f| %>
     <div class="modal-header">
       <a class="close" data-dismiss="modal">&#215;</a>
-      <h3>Request Invitation</h3>
+      <h3>request an invite</h3>
     </div>
     <div class="modal-body">
       <%= f.error_notification %>
@@ -14,9 +14,16 @@
     </div>
   <% end %>
 </div>
-<div id="romance-copy" style="text-align: center; margin-top: 80px">
-  <h2>Want in?</h2>
+<div id="romance-copy" class="iframe" style="text-align: center; margin-top: 80px">
+  
+  <iframe id="video" src="http://new.moziy.com/playback/chromeless"></iframe>
+  <div id="image">
+  <%= image_tag ("moziy-logo-trans.png")  %>
+  </div>
+  
+
+  
 </div>
 <div id="call-to-action" style="text-align: center; margin-top: 80px">
-  <a class="btn btn-primary btn-large" data-toggle="modal" href="#request-invite">Request invite</a>
+  <a class="button" data-toggle="modal" href="#request-invite">request invite</a>
 </div>
