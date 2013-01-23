@@ -4,6 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "moziy" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Prelaunch Signup" %>">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -17,10 +21,6 @@
       })();
 
     </script>
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-    <%= yield(:head) %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
 
