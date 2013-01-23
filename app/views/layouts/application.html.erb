@@ -38,8 +38,8 @@
         </div>
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
-
-    <iframe id="video" src="http://new.moziy.com/playback/chromeless"></iframe>
-
+    <% if controller.controller_name == "registrations" and controller.action_name == "new" %>
+      <iframe id="video" src="http://new.moziy.com/playback/chromeless"></iframe>
+    <% end %>
   </body>
 </html>
